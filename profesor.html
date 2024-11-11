@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gestión de Profesor</title>
+
+    <script type="text/javascript" src="./frontend/scriptProfesor.js"></script>
+    <script
+      type="text/javascript"
+      src="/backend/permisos/permissionsP.js"
+    ></script>
+
+    <link rel="stylesheet" type="text/css" href="static/stylesA.css" />
+  </head>
+  <body>
+    <div>
+      <a href="estudiantes.html">Estudiantes</a>
+      <a href="cursos.html">Cursos</a>
+    </div>
+
+    <div id="adicionarProfesores" style="display: none">
+      <form>
+        <div>
+          <h1>Adicionar Profesor</h1>
+          <label for="dni">Documento de identidad:</label>
+          <input type="text" id="dni" placeholder="" />
+          <br />
+
+          <label for="nombre">Nombres:</label>
+          <input type="text" id="nombre" placeholder="" />
+          <br />
+
+          <label for="apellidos">Apellidos:</label>
+          <input type="text" id="apellidos" placeholder="" />
+          <br />
+
+          <label for="email">Email:</label>
+          <input type="text" id="email" placeholder="" />
+          <br />
+
+          <label for="profesor">Profesor:</label>
+          <input type="text" id="profesor" placeholder="" />
+          <br />
+
+          <label for="telefono">Teléfono:</label>
+          <input type="text" id="telefono" placeholder="" value="" />
+          <br />
+          <br />
+          <br />
+          <input type="submit" onclick="guardar()" value="Aceptar" />
+        </div>
+      </form>
+    </div>
+
+    <div id="listarProfesores" style="display: none">
+      <form>
+        <h1>Listar Profesores</h1>
+        <p id="rta">Resultado:</p>
+        <input type="submit" onclick="listar()" value="Aceptar" />
+      </form>
+    </div>
+
+    <div id="actualizarProfesor" style="display: none">
+      <form>
+        <h1>Modificar Profesor</h1>
+        <label for="idA">Identificador:</label>
+        <input type="text" id="idA" placeholder="" />
+        <br />
+
+        <label for="dni">Documento de identidad:</label>
+        <input type="text" id="dniA" placeholder="" />
+        <br />
+
+        <label for="nombre">Nombres:</label>
+        <input type="text" id="nombreA" placeholder="" />
+        <br />
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidosA" placeholder="" />
+        <br />
+
+        <label for="correoA">Email:</label>
+        <input type="text" id="correoA" placeholder="" />
+        <br />
+
+        <label for="profesorA">Profesor:</label>
+        <input type="text" id="profesorA" placeholder="" />
+        <br />
+
+        <label for="telefonoA">Teléfono:</label>
+        <input type="text" id="telefonoA" placeholder="" />
+        <br />
+        <br />
+        <br />
+        <p id="rtaA">Resultado:</p>
+        <input type="submit" onclick="actualizar()" value="Aceptar" />
+      </form>
+    </div>
+
+    <div id="listarunProfesores" style="display: none">
+      <form>
+        <h1>Listar Profesor</h1>
+        <label for="idLE">Identificador del profesor a buscar:</label>
+        <input type="text" id="idLE" placeholder="" />
+        <br />
+        <p id="rtaLE">Resultado:</p>
+        <input type="submit" onclick="listar_profesores()" value="Aceptar" />
+      </form>
+    </div>
+
+    <div id="eliminarProfesor" style="display: none">
+      <form>
+        <h1>Eliminar Profesor</h1>
+        <label for="idEE">Identificador del profesor a borrar:</label>
+        <input type="text" id="idEE" placeholder="" />
+        <br />
+        <p id="rtaEE">Resultado:</p>
+        <input type="submit" onclick="eliminar_profesores()" value="Aceptar" />
+      </form>
+    </div>
+  </body>
+</html>
